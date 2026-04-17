@@ -1,0 +1,151 @@
+/* ═══ Feed ═══ */
+.feed { display: flex; flex-direction: column; gap: 8px; }
+
+/* ═══ Pinned Section ═══ */
+.pinned-section { margin-bottom: 24px; }
+.pinned-label {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-4); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+
+/* ═══ Cards ═══ */
+.card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  padding: 16px 20px;
+  transition: all var(--ease);
+  cursor: default;
+  box-shadow: var(--shadow-card);
+}
+.card:hover { border-color: var(--ink-4); box-shadow: var(--shadow-lift); transform: translateY(-1px); }
+
+.card-read { border-color: var(--paper-3); box-shadow: none; transform: none !important; }
+.card-read:hover { box-shadow: var(--shadow-card); }
+.card-read .card-title a { color: var(--ink-3); }
+
+.card-breaking { border-left: 3px solid var(--red); background: var(--red-bg); }
+.card-reading { border-left: 3px solid var(--teal); background: var(--teal-bg); }
+.card-pinned { border: 1px solid var(--amber-rule); background: var(--amber-bg); }
+.card-pinned:hover { border-color: var(--amber); }
+
+.card-layout { display: flex; gap: 16px; align-items: flex-start; }
+
+.card-icon {
+  width: 40px; height: 40px; border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+
+.card-body { flex: 1; min-width: 0; }
+
+.card-check {
+  font-family: var(--mono); font-size: 12px; color: var(--green);
+  flex-shrink: 0; margin-top: 2px;
+}
+
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 8px; flex-wrap: wrap; }
+.card-meta { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; color: var(--ink-3); flex-wrap: wrap; }
+.card-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-4); flex-shrink: 0; }
+.card-badges { display: flex; gap: 5px; align-items: center; flex-shrink: 0; }
+
+.pin-badge { font-family: var(--mono); font-size: 10px; color: var(--amber); }
+
+.card-title { font-size: 15px; font-weight: 500; line-height: 1.35; color: var(--ink); }
+.card-title a { color: inherit; text-decoration: none; }
+.card-title a:hover { color: var(--red); }
+
+.card-summary { font-size: 13px; color: var(--ink-2); line-height: 1.65; margin-top: 4px; }
+
+.card-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 8px; }
+
+/* ═══ Chips ═══ */
+.chip {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em;
+  text-transform: uppercase; padding: 2px 8px; border-radius: var(--r-sm);
+  white-space: nowrap; font-weight: 500;
+}
+.chip-breaking { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-rule); }
+.chip-high { background: var(--green-bg); color: var(--green); }
+.chip-medium { background: var(--blue-bg); color: var(--blue); }
+.chip-info { background: var(--paper-2); color: var(--ink-3); }
+.chip-preview { background: var(--amber-bg); color: var(--amber); }
+.chip-beta { background: var(--blue-bg); color: var(--blue); }
+
+.tag {
+  font-family: var(--mono); font-size: 10px; padding: 2px 7px;
+  border-radius: var(--r-sm); background: var(--paper-2); color: var(--ink-3);
+  border: 1px solid var(--paper-3);
+}
+
+/* ═══ SA Annotation ═══ */
+.sa-note {
+  border-left: 2px solid var(--amber); background: var(--amber-bg);
+  padding: 10px 14px; margin-top: 10px; border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+.sa-note-label {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--amber); font-weight: 500; margin-bottom: 3px;
+}
+.sa-note-text { font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+
+/* ═══ Radar ═══ */
+.radar { display: flex; flex-direction: column; gap: 36px; }
+.radar-group-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 12px; }
+.radar-bar { width: 4px; border-radius: 2px; min-height: 36px; flex-shrink: 0; margin-top: 4px; }
+.radar-bar-red { background: var(--red); }
+.radar-bar-green { background: var(--green); }
+.radar-bar-blue { background: var(--blue); }
+.radar-group-title { font-size: 18px; font-weight: 600; }
+.radar-group-count { font-family: var(--mono); font-size: 13px; color: var(--ink-3); margin-left: 8px; }
+.radar-group-desc { font-size: 13px; color: var(--ink-3); margin-top: 2px; }
+.radar-items { display: flex; flex-direction: column; gap: 8px; padding-left: 18px; }
+
+/* ═══ Rail Cards ═══ */
+.rail-card {
+  background: var(--white); border: 1px solid var(--rule);
+  border-radius: var(--r); padding: 16px; box-shadow: var(--shadow-card);
+}
+.rail-heading {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px;
+}
+
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.stat-cell {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 12px 8px 8px; background: var(--paper-2); border-radius: var(--r-sm);
+}
+.stat-num { font-family: var(--mono); font-size: 26px; font-weight: 500; line-height: 1; }
+.stat-num-red { color: var(--red); }
+.stat-num-green { color: var(--green); }
+.stat-label {
+  font-family: var(--mono); font-size: 9px; color: var(--ink-3);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-top: 5px;
+}
+
+.stack-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 0; border-bottom: 1px solid var(--paper-2);
+}
+.stack-row:last-child { border-bottom: none; }
+.stack-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.stack-active { background: var(--green); }
+.stack-partial { background: var(--amber); }
+.stack-inactive { background: var(--paper-3); }
+.stack-name { font-size: 12px; color: var(--ink-2); flex: 1; }
+
+/* ═══ About ═══ */
+.about { max-width: 600px; display: flex; flex-direction: column; gap: 16px; }
+.about-card {
+  background: var(--white); border: 1px solid var(--rule);
+  border-radius: var(--r); padding: 24px 28px; box-shadow: var(--shadow-card);
+}
+.about-card h2 { font-family: var(--serif); font-size: 22px; font-weight: 300; margin-bottom: 10px; }
+.about-card p { font-size: 14px; color: var(--ink-2); line-height: 1.75; }
+.about-card ul { padding-left: 18px; list-style: disc; margin-top: 8px; }
+.about-card li { font-size: 14px; color: var(--ink-2); line-height: 1.75; padding: 2px 0; }
+
+/* ═══ Empty ═══ */
+.empty { text-align: center; padding: 64px 24px; color: var(--ink-3); font-size: 15px; }

@@ -1,0 +1,1491 @@
+[
+  {
+    "id": "f5dfd35c1d1730b87615670e08ae825f00eea722b844d8e88e4cb78dec264e6d",
+    "title": "Create and Write to Unity Catalog Tables from External Delta Clients Beta",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#create-and-write-to-unity-catalog-tables-from-external-delta-clients-beta",
+    "published": "2026-04-14",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "medium",
+    "summary": "External Delta clients can now write directly to Unity Catalog tables, eliminating manual sync workflows for non-Databricks applications.",
+    "concepts": [
+      "Unity Catalog"
+    ],
+    "personas": [
+      "de"
+    ],
+    "stage": "Beta",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "ac5a899e0939f7c2781355dca0d9b6cf165abcf83b2b538b86139fb4bae58573",
+    "title": "Upcoming Behavioral Change VOID Columns Included in Delta Table Reads",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/whats-coming#upcoming-behavioral-change-void-columns-included-in-delta-table-reads",
+    "published": "2026-04-13",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "breaking",
+    "summary": "VOID columns will now be included in Delta table reads by default; update queries that explicitly filter them out to avoid breaking changes.",
+    "concepts": [
+      "Delta Lake"
+    ],
+    "personas": [
+      "ex",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "631f5bc7758b8e18272ac27048bd94f943bef421213dbf56b96d2beb893a369d",
+    "title": "Column Level SAP Governance Tags Sync into Unity Catalog",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#column-level-sap-governance-tags-sync-into-unity-catalog",
+    "published": "2026-04-13",
+    "source": "Release Notes",
+    "area": "Governance",
+    "impact": "medium",
+    "summary": "SAP governance tags now sync at column level into Unity Catalog, enabling fine-grained data lineage and compliance tracking across systems.",
+    "concepts": [
+      "SAP",
+      "Unity Catalog"
+    ],
+    "personas": [
+      "gv"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udee1\ufe0f",
+    "areaColor": "#1a6645",
+    "areaBg": "#eef6f1"
+  },
+  {
+    "id": "84de5fad1f14af63c05c8ee8c5d3d6af33d3fc2ec1ad6b4e03ecb66ee26a2b03",
+    "title": "Connect Lovable Apps to Azure Databricks",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#connect-lovable-apps-to-azure-databricks",
+    "published": "2026-04-13",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "medium",
+    "summary": "Lovable low-code apps integrate with Azure Databricks, allowing rapid UI development without manual API configuration.",
+    "concepts": [
+      "Apps"
+    ],
+    "personas": [
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "1bc1032fb771dc8f937f9e604f0831b4636b16d64f08c107e1b792d8cf8ced0f",
+    "title": "Vector Search Retrieval Quality Beta",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#vector-search-retrieval-quality-beta",
+    "published": "2026-04-13",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "medium",
+    "summary": "Vector Search retrieval quality improvements reduce hallucinations and irrelevant results in RAG applications through better semantic matching.",
+    "concepts": [
+      "Vector Search"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "e343ca5aae9b2f7ad3af9620322f36f523780f4b11106e67fea470be0f55e642",
+    "title": "SQL Reference Documentation for Managing Governed Tags",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#sql-reference-documentation-for-managing-governed-tags",
+    "published": "2026-04-13",
+    "source": "Release Notes",
+    "area": "Governance",
+    "impact": "medium",
+    "summary": "New SQL documentation provides syntax and examples for creating, updating, and managing governed tags in Unity Catalog.",
+    "concepts": [
+      "Governed Tags"
+    ],
+    "personas": [
+      "gv"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udee1\ufe0f",
+    "areaColor": "#1a6645",
+    "areaBg": "#eef6f1"
+  },
+  {
+    "id": "60d402b93d4946fb71382b40b5a1bec79f022aff32d87bf794b74c85bd4c43db",
+    "title": "C5 TISAX and K FSI Compliance Controls are Now Generally Available",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#c5-tisax-and-k-fsi-compliance-controls-are-now-generally-available",
+    "published": "2026-04-10",
+    "source": "Release Notes",
+    "area": "Governance",
+    "impact": "info",
+    "summary": "C5, TISAX, and K FSI compliance frameworks are now GA, enabling certified deployments for regulated industries in Databricks.",
+    "concepts": [
+      "Compliance"
+    ],
+    "personas": [
+      "gv"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udee1\ufe0f",
+    "areaColor": "#1a6645",
+    "areaBg": "#eef6f1"
+  },
+  {
+    "id": "6751ee23faaf5a6eb3ca29ce0b587c808235e1f6fa3e76a0d8ee48cb8ecaf28d",
+    "title": "Upcoming Breaking Change Default Behavior When Deleting a Unity Catalog Pipeline",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/whats-coming#upcoming-breaking-change-default-behavior-when-deleting-a-unity-catalog-pipeline",
+    "published": "2026-04-09",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "breaking",
+    "summary": "Deleting a Unity Catalog pipeline will now cascade delete associated resources by default; explicitly preserve resources before deletion.",
+    "concepts": [
+      "Unity Catalog"
+    ],
+    "personas": [
+      "ex",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "5001bd7d92cc828957a5850df71de1e84f2d328721a2a9dc7c9b7bf7e1acce26",
+    "title": "Dashboard Enhancements",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#dashboard-enhancements",
+    "published": "2026-04-09",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "medium",
+    "summary": "Dashboard UI improvements enhance interactivity and visualization options for faster insights from Databricks data.",
+    "concepts": [
+      "Dashboards"
+    ],
+    "personas": [
+      "an"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "dcc4b62bd0eee15cfcf83fe5167294ae41146627c9ee936aada1d648c8706821",
+    "title": "Genie Enhancements",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#genie-enhancements",
+    "published": "2026-04-09",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "medium",
+    "summary": "Genie now supports additional natural language query patterns and data sources, expanding self-service analytics capabilities.",
+    "concepts": [
+      "Genie"
+    ],
+    "personas": [
+      "an"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "1b30b0159740f472b65b8fd1f868f9ca32b3bed988288c4ff92f74f66742507f",
+    "title": "Databricks One Enhancements",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#databricks-one-enhancements",
+    "published": "2026-04-09",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "high",
+    "summary": "Databricks One now includes enhanced AI/BI capabilities for faster analytics and insights across unified data platform.",
+    "concepts": [
+      "Databricks One"
+    ],
+    "personas": [
+      "an",
+      "ex"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "811a60c887f22720ce96ba21db2aeef4154cd4a527bb728e4ec6b0c0db7cb6d5",
+    "title": "New Cascade Field for Deleting Unity Catalog Pipelines Beta",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#new-cascade-field-for-deleting-unity-catalog-pipelines-beta",
+    "published": "2026-04-09",
+    "source": "Release Notes",
+    "area": "Governance",
+    "impact": "medium",
+    "summary": "Unity Catalog pipelines can now cascade delete dependent objects, preventing orphaned metadata and simplifying cleanup workflows.",
+    "concepts": [
+      "Unity Catalog"
+    ],
+    "personas": [
+      "gv"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udee1\ufe0f",
+    "areaColor": "#1a6645",
+    "areaBg": "#eef6f1"
+  },
+  {
+    "id": "2ad36f2656bd107e0b3c5c046574e83da147393febe976cd0621a143eaf1d1a5",
+    "title": "Share Foreign Iceberg Tables with Delta Sharing Public Preview",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#share-foreign-iceberg-tables-with-delta-sharing-public-preview",
+    "published": "2026-04-09",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "medium",
+    "summary": "Foreign Iceberg tables can be shared via Delta Sharing, enabling cross-organization analytics without data duplication.",
+    "concepts": [
+      "Delta Sharing",
+      "Iceberg"
+    ],
+    "personas": [
+      "de"
+    ],
+    "stage": "PublicPreview",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "0ddeb508abdb394e4a419695eeca7f7149a5d1dd50ab8bc591436d76541d5c7c",
+    "title": "How FSIs eliminate silos between clients, operations, and finance",
+    "url": "https://www.databricks.com/blog/how-fsis-eliminate-silos-between-clients-operations-and-finance",
+    "published": "2026-04-08",
+    "source": "Blog",
+    "area": "Other",
+    "impact": "info",
+    "summary": "Financial services integrate client, operations, and finance data silos for unified risk and compliance visibility.",
+    "concepts": [],
+    "personas": [],
+    "stage": "",
+    "contentType": "article",
+    "areaIcon": "\ud83d\udccb",
+    "areaColor": "#72726a",
+    "areaBg": "#f1f0e8"
+  },
+  {
+    "id": "108aa94f62824c408c990375e913af2ea4ac734b6db0fa0f715cf7684a477ea9",
+    "title": "Databricks Runtime 182 and Databricks Runtime 182 ML are in Beta",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#databricks-runtime-182-and-databricks-runtime-182-ml-are-in-beta",
+    "published": "2026-04-08",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "medium",
+    "summary": "Runtime 182 adds performance improvements and ML libraries; practitioners should test before upgrading production workloads.",
+    "concepts": [
+      "Runtime"
+    ],
+    "personas": [
+      "de"
+    ],
+    "stage": "Beta",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "7162fc1b223aa2362d4d3c474c8a03612446a3d46edc02213bc9feb63430f6d4",
+    "title": "Scoped Personal Access Tokens are Now Generally Available",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#scoped-personal-access-tokens-are-now-generally-available",
+    "published": "2026-04-08",
+    "source": "Release Notes",
+    "area": "Governance",
+    "impact": "info",
+    "summary": "Scoped Personal Access Tokens now GA, enabling fine-grained API authentication with restricted permissions for improved security.",
+    "concepts": [
+      "Access Tokens"
+    ],
+    "personas": [
+      "gv"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udee1\ufe0f",
+    "areaColor": "#1a6645",
+    "areaBg": "#eef6f1"
+  },
+  {
+    "id": "f072bbf2ff4ac01b42f1843b81c4e31bfc770c56d0b42691b1183ee18598d286",
+    "title": "AI Prep Search Beta",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#ai_prep_search-beta",
+    "published": "2026-04-08",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "medium",
+    "summary": "AI Prep Search beta lets users discover and prepare data using natural language, reducing manual exploration time.",
+    "concepts": [],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "Beta",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "4292f78e50b153d82e06823c88fd8f574798f196101057955c3d296f46858fa9",
+    "title": "Git Backed App Deployments are Now Generally Available",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#git-backed-app-deployments-are-now-generally-available",
+    "published": "2026-04-07",
+    "source": "Release Notes",
+    "area": "Platform",
+    "impact": "high",
+    "summary": "Git-backed app deployments now GA, enabling version control and CI/CD for Databricks apps in production.",
+    "concepts": [],
+    "personas": [
+      "ex",
+      "gv",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udd27",
+    "areaColor": "#72726a",
+    "areaBg": "#f1f0e8"
+  },
+  {
+    "id": "339adcd52f52151887c8e4900541409bbc61f1e52788f5e64867e613bebcdb50",
+    "title": "Column Level SAP Governance Tags for SAP Bdc Shares",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/whats-coming#column-level-sap-governance-tags-for-sap-bdc-shares",
+    "published": "2026-04-06",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "breaking",
+    "summary": "SAP BDC shares now support column-level governance tags, enforcing data classification and access policies at column granularity.",
+    "concepts": [
+      "SAP"
+    ],
+    "personas": [
+      "ex",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "07bdfe7fc68f71dba67a32daba74a1b5631bfeb29df120ce66935ad746aa0777",
+    "title": "List Dashboards API Sort Order Change",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/whats-coming#list-dashboards-api-sort-order-change",
+    "published": "2026-04-06",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "breaking",
+    "summary": "List Dashboards API sort order changed; verify existing automation scripts to prevent unexpected result ordering in production.",
+    "concepts": [
+      "Dashboards"
+    ],
+    "personas": [
+      "ex",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "751b1bb3aeb8c92c7b6ac0c52bbd4a90edd1430d2cba9fe65b79e45df2808e50",
+    "title": "Databricks Marketplace Listing Creation Wizard",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#databricks-marketplace-listing-creation-wizard",
+    "published": "2026-04-06",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "medium",
+    "summary": "Marketplace listing creation now has guided wizard interface, reducing manual setup steps for data sellers.",
+    "concepts": [
+      "Marketplace"
+    ],
+    "personas": [
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "7f8c56886c5d9b9efe8c6c868cdceeed643f237c56bf50d6bdfb91e0e1e55e3f",
+    "title": "Workspace Skills for Genie Code are Now Available",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#workspace-skills-for-genie-code-are-now-available",
+    "published": "2026-04-06",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "medium",
+    "summary": "Genie can now generate code using workspace-specific skills, enabling AI to leverage custom business logic.",
+    "concepts": [
+      "Genie"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "ad62559eec85748e4d8c699be650556a9e802090c925d34670e94e72a1c952ce",
+    "title": "SAP Semantic Metadata Syncs Automatically into Unity Catalog",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#sap-semantic-metadata-syncs-automatically-into-unity-catalog",
+    "published": "2026-04-06",
+    "source": "Release Notes",
+    "area": "Governance",
+    "impact": "medium",
+    "summary": "SAP metadata automatically syncs to Unity Catalog, eliminating manual lineage documentation for SAP-sourced data.",
+    "concepts": [
+      "SAP",
+      "Unity Catalog"
+    ],
+    "personas": [
+      "gv"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udee1\ufe0f",
+    "areaColor": "#1a6645",
+    "areaBg": "#eef6f1"
+  },
+  {
+    "id": "tl4",
+    "title": "How to Evaluate LLM Applications",
+    "url": "https://hamel.dev/blog/posts/evals/",
+    "published": "2026-04-05",
+    "source": "Reading List",
+    "area": "Thought Leadership",
+    "impact": "info",
+    "summary": "The most practical eval guide available. Directly applicable to agent POC work.",
+    "concepts": [
+      "genai",
+      "evaluation"
+    ],
+    "personas": [
+      "ai",
+      "ml"
+    ],
+    "contentType": "reading",
+    "author": "Hamel Husain",
+    "domain": "hamel.dev",
+    "saNote": "The most practical eval guide I've found. Directly applicable to your agent POC.",
+    "areaIcon": "\ud83d\udcd6",
+    "areaColor": "#0a6b6b",
+    "areaBg": "#eaf5f5"
+  },
+  {
+    "id": "f77c726378b3861a462c23365c71cdcd3f8b39887e7526fde09288f87f04abd1",
+    "title": "Dashboard Enhancements and Bug Fixes",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#dashboard-enhancements-and-bug-fixes",
+    "published": "2026-04-02",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "info",
+    "summary": "Dashboard UI improvements and bug fixes enhance stability and user experience for BI workflows.",
+    "concepts": [
+      "Dashboards"
+    ],
+    "personas": [
+      "an"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "7b83105d2190fd22d970ccecc8a40efe637afefb7e323d9de3342b4a827bf952",
+    "title": "Genie Enhancements 1",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#genie-enhancements-1",
+    "published": "2026-04-02",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "medium",
+    "summary": "Genie adds new capabilities for natural language querying, improving AI assistant accuracy and functionality.",
+    "concepts": [
+      "Genie"
+    ],
+    "personas": [
+      "an"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "cd062b383b5b97189c3f42dc986ed4673e0a308765c3ff0cd54b890f6bfbf25d",
+    "title": "Databricks One Enhancements 1",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#databricks-one-enhancements-1",
+    "published": "2026-04-02",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "medium",
+    "summary": "Databricks One adds enhancements for unified analytics experience, streamlining multi-tool workflows.",
+    "concepts": [
+      "Databricks One"
+    ],
+    "personas": [
+      "an"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "809b25b5a79ccff29129072b814a7f52a59a90197457ae7abc6fbd025e256c95",
+    "title": "Databricks Runtime Maintenance Updates 0402",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#databricks-runtime-maintenance-updates-0402",
+    "published": "2026-04-02",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "medium",
+    "summary": "Runtime maintenance updates patch security and performance issues across Databricks compute clusters.",
+    "concepts": [],
+    "personas": [
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "08afd4e1b7fe5ee9ddd5fa2127a5a7a6cbdc71470137f64781bea8d5246dcfce",
+    "title": "Governed Tags are Generally Available",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/april#governed-tags-are-generally-available",
+    "published": "2026-04-02",
+    "source": "Release Notes",
+    "area": "Governance",
+    "impact": "info",
+    "summary": "Governed tags now GA, enabling standardized metadata classification and enforcement across Unity Catalog.",
+    "concepts": [
+      "Governed Tags"
+    ],
+    "personas": [
+      "gv"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udee1\ufe0f",
+    "areaColor": "#1a6645",
+    "areaBg": "#eef6f1"
+  },
+  {
+    "id": "tl1",
+    "title": "Designing Data-Intensive Applications",
+    "url": "https://dataintensive.net/",
+    "published": "2026-04-01",
+    "source": "Reading List",
+    "area": "Thought Leadership",
+    "impact": "info",
+    "summary": "The best single book on data systems. If your DE team reads one thing this year, make it this.",
+    "concepts": [
+      "architecture",
+      "fundamentals"
+    ],
+    "personas": [
+      "de",
+      "gv"
+    ],
+    "contentType": "reading",
+    "author": "Martin Kleppmann",
+    "domain": "dataintensive.net",
+    "saNote": "The best single book on data systems. If your DE team reads one thing this year, make it this.",
+    "areaIcon": "\ud83d\udcd6",
+    "areaColor": "#0a6b6b",
+    "areaBg": "#eaf5f5"
+  },
+  {
+    "id": "e203b31eb319551fa3832df14f1a13a3d45768bd0800385ea3b0214ae51bae8e",
+    "title": "Git Based Deployment for Databricks Apps Will Soon Be Available for Workspaces with the Compliance Security Profile Enabled",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/whats-coming#git-based-deployment-for-databricks-apps-will-soon-be-available-for-workspaces-with-the-compliance-security-profile-enabled",
+    "published": "2026-03-31",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "breaking",
+    "summary": "Git-based deployment for Databricks Apps coming to compliance-enabled workspaces, requiring workflow changes for regulated environments.",
+    "concepts": [],
+    "personas": [
+      "ex",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "48f33a555d56ca4fa1c92705f89cbb0d3d53540f36888067f165709e8c39baac",
+    "title": "Lakebase Will Be Enabled by Default for Workspaces with the Compliance Security Profile",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/whats-coming#lakebase-will-be-enabled-by-default-for-workspaces-with-the-compliance-security-profile",
+    "published": "2026-03-31",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "breaking",
+    "summary": "Lakebase auto-enables on compliance workspaces by default, enforcing stricter data governance without manual activation.",
+    "concepts": [
+      "Lakebase"
+    ],
+    "personas": [
+      "ex",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "ef9bd98da5518cc404c8a4d009a3e30dd39f495fc742b44723d742e1689355de",
+    "title": "Agent Bricks Knowledge Assistant and Supervisor Agent are Now Available in Additional Regions",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#agent-bricks-knowledge-assistant-and-supervisor-agent-are-now-available-in-additional-regions",
+    "published": "2026-03-31",
+    "source": "Release Notes",
+    "area": "Other",
+    "impact": "info",
+    "summary": "Agent Bricks Knowledge Assistant and Supervisor Agent now available in additional regions, expanding deployment options for multi-region architectures.",
+    "concepts": [
+      "Agent Bricks",
+      "Agents"
+    ],
+    "personas": [],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udccb",
+    "areaColor": "#72726a",
+    "areaBg": "#f1f0e8"
+  },
+  {
+    "id": "8d66d9110351df911596e30695d6ecdaa3eec790d24d029aa116ebc2deb649bf",
+    "title": "New SQL Editor Default Enablement and Legacy SQL Editor Retirement",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/whats-coming#new-sql-editor-default-enablement-and-legacy-sql-editor-retirement",
+    "published": "2026-03-30",
+    "source": "Release Notes",
+    "area": "Other",
+    "impact": "info",
+    "summary": "New SQL Editor becomes default with legacy editor retirement, requiring migration of existing queries and custom configurations.",
+    "concepts": [
+      "SQL Editor"
+    ],
+    "personas": [],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udccb",
+    "areaColor": "#72726a",
+    "areaBg": "#f1f0e8"
+  },
+  {
+    "id": "8a69079a4bd0f2efd3cca26a3d660a379e00972f4788a515005ca73ea8aaa6e7",
+    "title": "Databricks Connector for Google Sheets Updates",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#databricks-connector-for-google-sheets-updates",
+    "published": "2026-03-30",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "medium",
+    "summary": "Databricks Connector for Google Sheets updated with improved sync capabilities, enabling more reliable real-time data integration from sheets.",
+    "concepts": [],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "20e4d83717b759156c46853a5271c1c4fd17d664d9d8b859c982f070836a8d18",
+    "title": "Agent Bricks Now Covers All Databricks AI Capabilities",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#agent-bricks-now-covers-all-databricks-ai-capabilities",
+    "published": "2026-03-27",
+    "source": "Release Notes",
+    "area": "Other",
+    "impact": "info",
+    "summary": "Agent Bricks now covers all Databricks AI capabilities including Genie and generative AI, consolidating agent documentation and use cases.",
+    "concepts": [
+      "Agent Bricks"
+    ],
+    "personas": [],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udccb",
+    "areaColor": "#72726a",
+    "areaBg": "#f1f0e8"
+  },
+  {
+    "id": "b637d0d51ad68f85e47c59063601ba1c43dd09717bd5f579078932ad062fba1a",
+    "title": "Classification and Information Extraction are in Public Preview",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#classification-and-information-extraction-are-in-public-preview",
+    "published": "2026-03-27",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "Classification and Information Extraction enter public preview, allowing production use of AI-powered data categorization and entity detection.",
+    "concepts": [
+      "AI Functions"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "PublicPreview",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "4ad17aff05ab712529529fd67db47301eba7d4600554978c3875a0533e733db3",
+    "title": "AI Classify and AI Extract Now Support V2 Signatures Public Preview",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#ai_classify-and-ai_extract-now-support-v2-signatures-public-preview",
+    "published": "2026-03-27",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "AI Classify and AI Extract support V2 signatures in public preview, enabling improved type safety and API consistency.",
+    "concepts": [
+      "AI Functions"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "PublicPreview",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "bfd5686bfaaa6cf55f2edde63a188b72b2263f11f253e06068c5475ef5137a83",
+    "title": "Databricks SQL Version 202610 is Now Available in Preview",
+    "url": "https://learn.microsoft.com/azure/databricks/sql/release-notes/2026#databricks-sql-version-202610-is-now-available-in-preview",
+    "published": "2026-03-26",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "medium",
+    "summary": "Databricks SQL version 2026.10 is now available in Preview, with new features and improvements such as optimized writes for Unity Catalog CRTAS operations, timestamp partition values using session timezone, and new SQL functions for vector aggregate and scalar functions. The new version also includes improvements to SQL scripting, parameter markers, and geospatial functions.",
+    "concepts": [],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "PublicPreview",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "ca718c570600ee1a93eeeae6f72cbec32bb0e7fbaeff9f19af57addc1a06fb22",
+    "title": "Genie Enhancements 2",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#genie-enhancements-2",
+    "published": "2026-03-26",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "medium",
+    "summary": "Genie enhancements improve natural language query performance and result accuracy for business intelligence workflows.",
+    "concepts": [
+      "Genie"
+    ],
+    "personas": [
+      "an"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "38ac299e484f1d6f9124b46cb36bbc6ae6c7d10e72883f3628096b3991f52385",
+    "title": "Dashboard Enhancements and Bug Fixes 1",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#dashboard-enhancements-and-bug-fixes-1",
+    "published": "2026-03-26",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "medium",
+    "summary": "Dashboard enhancements and bug fixes improve UI responsiveness and data visualization reliability.",
+    "concepts": [
+      "Dashboards"
+    ],
+    "personas": [
+      "an"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "7e04a68d0d87b166b862104f057459aafccb947479741b9823ee4a16817ab3e7",
+    "title": "Building an A/B testing analysis framework for mobile gaming on Databricks",
+    "url": "https://www.databricks.com/blog/building-ab-testing-analysis-framework-mobile-gaming-databricks",
+    "published": "2026-03-25",
+    "source": "Blog",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "Sega HARDlight automated A/B test analysis on Databricks, reducing manual workflows and increasing experimentation capacity. The framework provides daily-refresh monitoring, statistical modeling, and result publication, democratizing access to actionable insights. This approach enables teams to understand results, build confidence, and adopt a shared scientific approach to experimentation.",
+    "concepts": [],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "n/a",
+    "contentType": "article",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "a1415a3255bcac2801d1430e625d3929a597a85361419f10f60e62a090a9b63e",
+    "title": "What are Analytic Applications?",
+    "url": "https://www.databricks.com/blog/what-are-analytic-applications",
+    "published": "2026-03-25",
+    "source": "Blog",
+    "area": "AI/BI",
+    "impact": "info",
+    "summary": "Analytic applications are domain-specific, packaged BI solutions that combine data integration, modeling, and reporting to help business users quickly turn data into actionable insights. They operate on top of centralized data platforms, pulling data from systems like ERP and CRM to deliver insights through dashboards, reports, and workflows. This enables faster, more consistent decision-making across business functions.",
+    "concepts": [],
+    "personas": [
+      "an"
+    ],
+    "stage": "n/a",
+    "contentType": "article",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "d1e023e23a2212b1cd8b51e9b3319f5eec768ae0b921f85355f89a15c17fc7cb",
+    "title": "Type Widening is Now Generally Available",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#type-widening-is-now-generally-available",
+    "published": "2026-03-25",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "high",
+    "summary": "Type Widening now generally available, allowing automatic type conversions in queries to reduce casting errors and improve compatibility.",
+    "concepts": [
+      "Type Widening"
+    ],
+    "personas": [
+      "ml",
+      "ex",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "2a1e74774b7e4a03d58817a4df861d03764a79c467ba6ca79597effbabf3fa8a",
+    "title": "Auto Loader Supports Automatic Type Widening Public Preview",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#auto-loader-supports-automatic-type-widening-public-preview",
+    "published": "2026-03-25",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "medium",
+    "summary": "Auto Loader now supports automatic type widening with the new addNewColumnsWithTypeWidening schema evolution mode. This feature automatically widens data types without requiring data rewrite or user intervention. Type widening is available for all file formats with schema evolution support in Auto Loader.",
+    "concepts": [
+      "Auto Loader",
+      "Type Widening"
+    ],
+    "personas": [
+      "de"
+    ],
+    "stage": "PublicPreview",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "ece45d0b8538cb448b1030fe9ca427b7f36490e678124fb32cb4681f90884917",
+    "title": "New Fields in Lineage System Table Entity Metadata",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#new-fields-in-lineage-system-table-entity-metadata",
+    "published": "2026-03-25",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "New fields added to lineage system table entity metadata, providing richer data governance and impact analysis capabilities.",
+    "concepts": [],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "tl3",
+    "title": "The Log: What every software engineer should know about real-time data",
+    "url": "https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying",
+    "published": "2026-03-25",
+    "source": "Reading List",
+    "area": "Thought Leadership",
+    "impact": "info",
+    "summary": "10 years old and still the clearest explanation of event-driven architecture. 30 minutes well spent.",
+    "concepts": [
+      "streaming",
+      "architecture"
+    ],
+    "personas": [
+      "de",
+      "ml"
+    ],
+    "contentType": "reading",
+    "author": "Jay Kreps",
+    "domain": "engineering.linkedin.com",
+    "saNote": "10 years old and still the clearest explanation of event-driven architecture. 30 minutes well spent.",
+    "areaIcon": "\ud83d\udcd6",
+    "areaColor": "#0a6b6b",
+    "areaBg": "#eaf5f5"
+  },
+  {
+    "id": "yt2",
+    "title": "What are Analytic Applications?",
+    "url": "https://www.databricks.com/blog/what-are-analytic-applications",
+    "published": "2026-03-25",
+    "source": "Blog",
+    "area": "AI/BI",
+    "impact": "info",
+    "summary": "The case for embedded analytics as first-class Databricks citizens \u2014 Lakebase, Apps, and Genie together.",
+    "concepts": [
+      "Apps",
+      "Lakebase",
+      "Genie"
+    ],
+    "personas": [
+      "an",
+      "de",
+      "ex"
+    ],
+    "contentType": "article",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "008d5efcbe725c7016d13404ecd77396b50485c4a86ecd6b6167be2911f16b03",
+    "title": "Dynamic Parameters in the New SQL Editor",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#dynamic-parameters-in-the-new-sql-editor",
+    "published": "2026-03-24",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "medium",
+    "summary": "SQL Editor now supports dynamic parameters, enabling parameterized queries without manual string substitution.",
+    "concepts": [
+      "SQL Editor"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "110efc8473dcc7bd5b52cd41b2e8960f55427d9aec81c27b02ea44009e4ca5e7",
+    "title": "New Ui for the Databricks Apps Console",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/whats-coming#new-ui-for-the-databricks-apps-console",
+    "published": "2026-03-23",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "breaking",
+    "summary": "Apps Console UI redesigned; existing workflows may require navigation pattern updates.",
+    "concepts": [],
+    "personas": [
+      "ex",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "9da78446b7e86b1b1cf5c8313eae972259cd0c16dc783cf132eb82128598aee0",
+    "title": "Connect External Data Sources to Databricks One Chat Beta",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#connect-external-data-sources-to-databricks-one-chat-beta",
+    "published": "2026-03-23",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "medium",
+    "summary": "One Chat Beta can now query external data sources directly, expanding analysis scope beyond Databricks tables.",
+    "concepts": [
+      "Databricks One"
+    ],
+    "personas": [
+      "an"
+    ],
+    "stage": "Beta",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "9f914626ef594c3751c2394247869af343fee35f0f4128c784571605949a05e4",
+    "title": "Supervisor Agent Supports Long Running Tasks",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#supervisor-agent-supports-long-running-tasks",
+    "published": "2026-03-21",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "Supervisor Agent handles long-running tasks without timeout, enabling complex multi-step workflows.",
+    "concepts": [
+      "Agents"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "tl2",
+    "title": "Building LLM-Powered Applications",
+    "url": "https://huyenchip.com/2025/01/16/building-llm-applications.html",
+    "published": "2026-03-20",
+    "source": "Reading List",
+    "area": "Thought Leadership",
+    "impact": "info",
+    "summary": "Practical production patterns for LLM apps. Skip the hype, read this instead.",
+    "concepts": [
+      "genai",
+      "production"
+    ],
+    "personas": [
+      "ai",
+      "ml"
+    ],
+    "contentType": "reading",
+    "author": "Chip Huyen",
+    "domain": "huyenchip.com",
+    "saNote": "Practical production patterns for LLM apps. Skip the hype, read this instead.",
+    "areaIcon": "\ud83d\udcd6",
+    "areaColor": "#0a6b6b",
+    "areaBg": "#eaf5f5"
+  },
+  {
+    "id": "d7ee2827fb284ebf1fd10e11c0b6a13ab5fa2d96860016528a92c5feee01932d",
+    "title": "Changes to Open Delta Sharing Recipient Tokens",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/whats-coming#changes-to-open-delta-sharing-recipient-tokens",
+    "published": "2026-03-19",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "breaking",
+    "summary": "Delta Sharing recipient tokens changed; existing integrations require token regeneration and redeployment.",
+    "concepts": [
+      "Delta Sharing"
+    ],
+    "personas": [
+      "ex",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "c184b6feb51082c24984d2c29663269171f97994d8e02302557b9b0bbefa7256",
+    "title": "New Creation Wizard for Marketplace Providers",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/whats-coming#new-creation-wizard-for-marketplace-providers",
+    "published": "2026-03-19",
+    "source": "Release Notes",
+    "area": "Data Engineering",
+    "impact": "breaking",
+    "summary": "Marketplace provider setup now uses guided wizard instead of manual configuration, streamlining onboarding.",
+    "concepts": [
+      "Marketplace"
+    ],
+    "personas": [
+      "ex",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "6da47fd34ff258e8bb7dbf64bab90bbcb0e3b78830e5933920420c65aa0b0c45",
+    "title": "Dashboard Enhancements and Bug Fixes 2",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#dashboard-enhancements-and-bug-fixes-2",
+    "published": "2026-03-19",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "medium",
+    "summary": "Dashboard UI improvements and bug fixes enhance performance and user experience.",
+    "concepts": [
+      "Dashboards"
+    ],
+    "personas": [
+      "an"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "5f1397f1a10e15513f04fd6191c94ce684f30d0ab3487a3616f1cf704cda933c",
+    "title": "Genie Enhancements and Bug Fixes",
+    "url": "https://learn.microsoft.com/azure/databricks/ai-bi/release-notes/2026#genie-enhancements-and-bug-fixes",
+    "published": "2026-03-19",
+    "source": "Release Notes",
+    "area": "AI/BI",
+    "impact": "medium",
+    "summary": "Genie enhancements and bug fixes improve natural language query accuracy and reliability.",
+    "concepts": [
+      "Genie"
+    ],
+    "personas": [
+      "an"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udcca",
+    "areaColor": "#9a5a08",
+    "areaBg": "#fdf4e4"
+  },
+  {
+    "id": "d920dc21427ab2aefc58c42fa778d8a15247174b36036cae32858848829d93ac",
+    "title": "Create Alerts for Anomaly Detection in the Data Quality Monitoring Ui Beta",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#create-alerts-for-anomaly-detection-in-the-data-quality-monitoring-ui-beta",
+    "published": "2026-03-19",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "medium",
+    "summary": "Data Quality Monitoring UI now supports anomaly detection alerts, enabling proactive data issue detection.",
+    "concepts": [
+      "Data Quality"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "PublicPreview",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "d06008eaaba21b549c24a766ef4335c6cac6e181ba687e1b364980e91fe3fc18",
+    "title": "AI Runtime is Now in Public Preview",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#ai-runtime-is-now-in-public-preview",
+    "published": "2026-03-19",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "AI Runtime enters public preview; practitioners can now test GPU-accelerated ML workloads in production.",
+    "concepts": [
+      "AI Runtime"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "PublicPreview",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "420158d8fcdf04f134f5e02131f1be6e9e8dfc1fa95a0fc93a30fb0ef4f7ee6f",
+    "title": "SQL Alert Task for Jobs Beta",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#sql-alert-task-for-jobs-beta",
+    "published": "2026-03-19",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "SQL Alert Tasks let you trigger job notifications based on query result conditions without custom code.",
+    "concepts": [],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "Beta",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "1ec04a8ea78f3907fe52569467702c926239eab977fed6bc5f74a0c2ddf8c800",
+    "title": "Databricks JDBC Driver 280 is Available",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#databricks-jdbc-driver-280-is-available",
+    "published": "2026-03-18",
+    "source": "Release Notes",
+    "area": "Platform",
+    "impact": "info",
+    "summary": "JDBC Driver 280 adds performance improvements and bug fixes for Java-based Databricks connections.",
+    "concepts": [],
+    "personas": [
+      "gv",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udd27",
+    "areaColor": "#72726a",
+    "areaBg": "#f1f0e8"
+  },
+  {
+    "id": "e4fca641c9b8e97ac485023e4926d5fc79f5b717c9167cb9f3915cf3aaab49fe",
+    "title": "Azure Databricks Usage Dashboard is Now Generally Available",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#azure-databricks-usage-dashboard-is-now-generally-available",
+    "published": "2026-03-18",
+    "source": "Release Notes",
+    "area": "Platform",
+    "impact": "info",
+    "summary": "Azure Databricks Usage Dashboard provides visibility into workspace resource consumption and cost allocation.",
+    "concepts": [
+      "Dashboards"
+    ],
+    "personas": [
+      "gv",
+      "de"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83d\udd27",
+    "areaColor": "#72726a",
+    "areaBg": "#f1f0e8"
+  },
+  {
+    "id": "c6f0c465394b384cfc918a4878a6501b0b46c0c1616f9ef9b2549cb029815f3b",
+    "title": "Databricks Apps Supports Uv for Python Dependency Management",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#databricks-apps-supports-uv-for-python-dependency-management",
+    "published": "2026-03-17",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "Databricks Apps now supports Uv for faster Python dependency resolution in deployed applications.",
+    "concepts": [],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "eac74d5ccabbd6421a8b0cae884a5191dadf40959ceeb82f046515a8f294c421",
+    "title": "Search in Metric Views Fix",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#search-in-metric-views-fix",
+    "published": "2026-03-17",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "Metric Views search now works correctly, enabling faster discovery of tracked ML metrics.",
+    "concepts": [],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "797359296e8334a978fa7bfff30a0d28640e9d70e577e93408ace26cfdb5e873",
+    "title": "GCI drives value for their customers and their business with Databricks",
+    "url": "https://www.databricks.com/blog/gci-drives-value-their-customers-and-their-business-databricks",
+    "published": "2026-03-16",
+    "source": "Blog",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "GCI partnered with Databricks to modernize data operations and analytics, leveraging tools like Metric Views, Genie, and Dynamic Dashboards to improve network performance and customer experience. The partnership resulted in faster insights, lower costs, improved collaboration, and smarter decisions. GCI and Databricks will continue to partner to deliver optimal customer experience.",
+    "concepts": [],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "n/a",
+    "contentType": "article",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "f0a14db4c6a6bb27d687d219a2476bb1be05121187f876d5044eddbfb9124cc7",
+    "title": "Ship quality enterprise AI agents to business users with Agent Bricks and Databricks Apps",
+    "url": "https://www.databricks.com/blog/ship-quality-enterprise-ai-agents-business-users-agent-bricks-and-databricks-apps",
+    "published": "2026-03-16",
+    "source": "Blog",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "This blog post discusses how to ship quality enterprise AI agents to business users using Agent Bricks, Databricks Apps, and Databricks One. It provides a step-by-step guide on how to build, deploy, and distribute AI agents, and highlights the benefits of using these tools, including streamlined evaluation and optimization, secure deployment, and simplified distribution.",
+    "concepts": [
+      "Agent Bricks"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "n/a",
+    "contentType": "article",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "eb5996b38a18463fc26f50ed096bdf3e5a1a42367e6a4b7738e441a6441be5c6",
+    "title": "Develop and deploy Serverless JARs",
+    "url": "https://www.databricks.com/blog/develop-and-deploy-serverless-jars",
+    "published": "2026-03-16",
+    "source": "Blog",
+    "area": "Data Engineering",
+    "impact": "info",
+    "summary": "Databricks introduces Serverless JARs, allowing teams to build and run Scala and Java Spark Jobs on fully managed Serverless compute. This feature enables fast startup times, versionless upgrades, and no infrastructure management. Developers can focus on writing code and pay only for the compute they use.",
+    "concepts": [],
+    "personas": [
+      "de"
+    ],
+    "stage": "",
+    "contentType": "article",
+    "areaIcon": "\u2699\ufe0f",
+    "areaColor": "#1a4280",
+    "areaBg": "#eef2fc"
+  },
+  {
+    "id": "bd4b9ac4581f806aa032026bc9fa128c2f0f20823ea8f5bf8347a18de28af375",
+    "title": "Lakebase Autoscaling Databases As Databricks Apps Resources",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#lakebase-autoscaling-databases-as-databricks-apps-resources",
+    "published": "2026-03-16",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "Lakebase autoscaling databases can be provisioned as Databricks Apps resources for dynamic workload scaling.",
+    "concepts": [
+      "Lakebase"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "482cf4e50066a6525c172a2760612e931ffd32fb43a37126aabd16bdc5421a1f",
+    "title": "Databricks Asset Bundles is Now Declarative Automation Bundles",
+    "url": "https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#databricks-asset-bundles-is-now-declarative-automation-bundles",
+    "published": "2026-03-16",
+    "source": "Release Notes",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "Databricks Asset Bundles renamed to Declarative Automation Bundles to reflect broader infrastructure-as-code capabilities.",
+    "concepts": [
+      "DABs"
+    ],
+    "personas": [
+      "ml",
+      "ai"
+    ],
+    "stage": "",
+    "contentType": "release",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  },
+  {
+    "id": "yt1",
+    "title": "Ship Quality Enterprise AI Agents with Agent Bricks and Databricks Apps",
+    "url": "https://www.databricks.com/blog/ship-quality-enterprise-ai-agents-business-users-agent-bricks-and-databricks-apps",
+    "published": "2026-03-16",
+    "source": "Blog",
+    "area": "AI/ML",
+    "impact": "info",
+    "summary": "How to build and deploy production AI agents using Agent Bricks \u2014 from prototyping to enterprise deployment.",
+    "concepts": [
+      "Agent Bricks",
+      "Apps"
+    ],
+    "personas": [
+      "ai",
+      "ml"
+    ],
+    "contentType": "article",
+    "areaIcon": "\ud83e\udde0",
+    "areaColor": "#4830a0",
+    "areaBg": "#f0edf9"
+  }
+]
