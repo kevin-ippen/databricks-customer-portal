@@ -1,6 +1,7 @@
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, useEffect } from 'react'
 import { feed, releases, personas, type Persona, type View, type DateRange } from './data'
 import { usePersistedSet, usePersistedString } from './hooks/usePersistedState'
+import { logEvent, recordVisit, getNewSinceLastVisit } from './hooks/analytics'
 import { FeedCard } from './components/FeedCard'
 import { EventsHub } from './components/EventsHub'
 import { ThoughtLeadership } from './components/ThoughtLeadership'
@@ -9,6 +10,7 @@ import { ReleaseHeatmap } from './components/ReleaseHeatmap'
 import { InnovationTimeline } from './components/InnovationTimeline'
 import { HomePage } from './components/HomePage'
 import { FeedbackBox } from './components/FeedbackBox'
+import { NextUnlock } from './components/NextUnlock'
 
 const VIEWS: { key: View; label: string }[] = [
   { key: 'home', label: 'ICYMI' },
@@ -75,9 +77,16 @@ export function App() {
   const markAllRead = useCallback(() => { filteredReleases.forEach(i => markRead(i.id)) }, [filteredReleases, markRead])
   const readCount = filteredReleases.filter(i => readItems.has(i.id)).length
   const currentPersona = personas.find(p => p.key === persona)
-
-  // Show toolbar on releases and blogs views
   const showToolbar = view === 'releases' || view === 'blogs'
+
+  // New-since-last-visit counts for tab badges
+  const newReleases = useMemo(() => getNewSinceLastVisit(releases), [])
+  const newBlogs = useMemo(() => getNewSinceLastVisit(feed.filter(i => i.contentType === 'article' || i.source === 'Blog')), [])
+
+  // Record visit + log page view on view change
+  useEffect(() => { recordVisit() }, [])
+  useEffect(() => { logEvent('page_view', undefined, { view }) }, [view])
+  useEffect(() => { logEvent('persona_change', undefined, { persona }) }, [persona])
 
   return (
     <div className="app">
@@ -101,11 +110,15 @@ export function App() {
 
         {/* View tabs — primary nav, IN the top bar */}
         <div className="persona-tabs">
-          {VIEWS.map(v => (
-            <button key={v.key} className={`persona-tab${view === v.key ? ' active' : ''}`} onClick={() => setView(v.key)}>
-              {v.label}
-            </button>
-          ))}
+          {VIEWS.map(v => {
+            const newCount = v.key === 'releases' ? newReleases : v.key === 'blogs' ? newBlogs : 0
+            return (
+              <button key={v.key} className={`persona-tab${view === v.key ? ' active' : ''}`} onClick={() => setView(v.key)}>
+                {v.label}
+                {newCount > 0 && <span className="tab-new">{newCount}</span>}
+              </button>
+            )
+          })}
         </div>
       </div>
 
@@ -165,7 +178,12 @@ export function App() {
         )}
 
         {/* Views */}
-        {view === 'home' && <HomePage onRead={markRead} readItems={readItems} persona={persona} />}
+        {view === 'home' && (
+          <>
+            <NextUnlock persona={persona} />
+            <HomePage onRead={markRead} readItems={readItems} persona={persona} />
+          </>
+        )}
 
         {view === 'releases' && (
           <div>

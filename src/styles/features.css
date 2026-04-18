@@ -1,0 +1,70 @@
+/* ═══ Next Unlock / Recommendation ═══ */
+.unlock {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--green);
+  border-radius: var(--r);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-card);
+}
+.unlock-badge {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--green); font-weight: 500;
+  margin-bottom: 12px;
+}
+.unlock-layout { display: flex; gap: 16px; align-items: flex-start; }
+.unlock-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.unlock-body { flex: 1; }
+.unlock-title { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+.unlock-desc { font-size: 14px; color: var(--ink-2); line-height: 1.65; margin-bottom: 8px; }
+.unlock-context {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-3);
+  font-style: italic; margin-bottom: 12px;
+}
+.unlock-action {
+  font-family: var(--mono); font-size: 12px; color: var(--green);
+  font-weight: 500; transition: color var(--ease);
+}
+.unlock-action:hover { color: var(--ink); }
+
+/* ═══ Card action buttons ═══ */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+  align-items: center;
+  opacity: 0;
+  transition: opacity var(--ease);
+}
+.card:hover .card-actions { opacity: 1; }
+
+.card-share, .card-ask {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  background: var(--paper-2);
+  color: var(--ink-3);
+  border: 1px solid var(--paper-3);
+  transition: all var(--ease);
+}
+.card-share:hover { background: var(--green-bg); color: var(--green); border-color: var(--green); }
+.card-ask:hover { background: var(--blue-bg); color: var(--blue); border-color: var(--blue); }
+
+.card-check {
+  font-family: var(--mono); font-size: 12px; color: var(--green); margin-top: 2px;
+}
+
+/* ═══ New-since badge on tabs ═══ */
+.tab-new {
+  font-family: var(--mono);
+  font-size: 9px;
+  background: var(--red);
+  color: var(--paper);
+  padding: 1px 5px;
+  border-radius: 8px;
+  margin-left: 5px;
+  font-weight: 500;
+}

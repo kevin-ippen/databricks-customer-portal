@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import type { FeedItem } from '../data'
+import { logEvent } from '../hooks/analytics'
 
 const IMPACT_LABEL: Record<string, string> = {
   breaking: 'Breaking',
@@ -24,6 +26,46 @@ function ContentTypeBadge({ type }: { type?: string }) {
   return <span className="chip" style={{ background: c.bg, color: c.color }}>{c.label}</span>
 }
 
+function ShareButton({ item }: { item: FeedItem }) {
+  const [copied, setCopied] = useState(false)
+
+  const share = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    const text = `${item.title}\n${item.summary ? item.summary + '\n' : ''}${item.url}`
+    navigator.clipboard.writeText(text)
+    setCopied(true)
+    logEvent('share', item.id, { title: item.title })
+    setTimeout(() => setCopied(false), 1500)
+  }
+
+  return (
+    <button className="card-share" onClick={share} title="Copy to clipboard">
+      {copied ? '✓' : '↗'}
+    </button>
+  )
+}
+
+function AskSAButton({ item }: { item: FeedItem }) {
+  const ask = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    const subject = encodeURIComponent(`Question about: ${item.title}`)
+    // In production this would route to feedback box or Slack
+    // For now, scroll to feedback and pre-fill
+    logEvent('ask_sa', item.id, { title: item.title })
+    const el = document.querySelector('.feedback-textarea') as HTMLTextAreaElement
+    if (el) {
+      el.value = `Re: ${item.title}\n\n`
+      el.focus()
+    }
+  }
+
+  return (
+    <button className="card-ask" onClick={ask} title="Ask your SA about this">
+      ?
+    </button>
+  )
+}
+
 export function FeedCard({ item, isRead, onRead }: {
   item: FeedItem
   isRead: boolean
@@ -31,20 +73,27 @@ export function FeedCard({ item, isRead, onRead }: {
 }) {
   const isBreaking = item.impact === 'breaking'
   const isReading = item.contentType === 'reading'
-  const isPinned = item.pinned
+
+  const handleClick = () => {
+    onRead(item.id)
+    logEvent('read', item.id, { title: item.title, area: item.area, impact: item.impact })
+  }
+
+  const handleLinkClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    logEvent('click_through', item.id, { title: item.title, url: item.url })
+  }
 
   return (
     <article
-      className={`card${isRead ? ' card-read' : ''}${isBreaking ? ' card-breaking' : ''}${isReading ? ' card-reading' : ''}${isPinned ? ' card-pinned' : ''}`}
-      onClick={() => onRead(item.id)}
+      className={`card${isRead ? ' card-read' : ''}${isBreaking ? ' card-breaking' : ''}${isReading ? ' card-reading' : ''}`}
+      onClick={handleClick}
     >
       <div className="card-layout">
-        {/* Area icon */}
         <div className="card-icon" style={{ background: item.areaBg || '#f1f0e8', color: item.areaColor || '#72726a' }}>
           <span>{item.areaIcon || '📋'}</span>
         </div>
 
-        {/* Content */}
         <div className="card-body">
           <div className="card-top">
             <div className="card-meta">
@@ -56,14 +105,13 @@ export function FeedCard({ item, isRead, onRead }: {
               {item.author && <><span className="dot" /><span>{item.author}</span></>}
             </div>
             <div className="card-badges">
-              {isPinned && <span className="pin-badge">📌 Pinned</span>}
               <ContentTypeBadge type={item.contentType} />
               <span className={`chip chip-${item.impact}`}>{IMPACT_LABEL[item.impact] || item.impact}</span>
             </div>
           </div>
 
           <h3 className="card-title">
-            <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
+            <a href={item.url} target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>{item.title}</a>
           </h3>
 
           {item.summary && <p className="card-summary">{item.summary}</p>}
@@ -83,8 +131,12 @@ export function FeedCard({ item, isRead, onRead }: {
           )}
         </div>
 
-        {/* Read indicator */}
-        {isRead && <span className="card-check">✓</span>}
+        {/* Actions */}
+        <div className="card-actions">
+          <ShareButton item={item} />
+          <AskSAButton item={item} />
+          {isRead && <span className="card-check">✓</span>}
+        </div>
       </div>
     </article>
   )

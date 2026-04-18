@@ -8,6 +8,7 @@ import './styles/components.css'
 import './styles/phase3.css'
 import './styles/viz.css'
 import './styles/home.css'
+import './styles/features.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
