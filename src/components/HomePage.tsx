@@ -1,8 +1,6 @@
-import { useState } from 'react'
-import { blogs, releases, personas, type Persona, type FeedItem } from '../data'
+import { blogs, releases, type Persona, type FeedItem } from '../data'
 import { FeedCard } from './FeedCard'
 
-// Pick top 3 by impact then recency
 function topN(items: FeedItem[], n: number): FeedItem[] {
   const impactOrder: Record<string, number> = { breaking: 0, high: 1, medium: 2, info: 3 }
   return [...items]
@@ -40,28 +38,33 @@ function FeaturedVideo() {
   )
 }
 
-export function HomePage({ onRead, readItems }: { onRead: (id: string) => void; readItems: Set<string> }) {
-  const [tab, setTab] = useState<Persona>('all')
+export function HomePage({ onRead, readItems, persona }: {
+  onRead: (id: string) => void
+  readItems: Set<string>
+  persona: Persona
+}) {
+  // Top 3 blogs (most recent, not persona filtered — these are universal)
+  const topBlogs = topN([...blogs].sort((a, b) => b.published.localeCompare(a.published)), 3)
 
-  const allBlogs = blogs.sort((a, b) => b.published.localeCompare(a.published))
-  const topBlogs = topN(allBlogs, 3)
+  // Top picks — persona-filtered from the global persona chip
+  const allItems = [...releases, ...blogs]
+  const personaPicks = persona === 'all'
+    ? topN(allItems, 5)
+    : topN(allItems.filter(i => i.personas.includes(persona)), 5)
 
-  const personaFiltered = tab === 'all'
-    ? topN([...releases, ...blogs], 3)
-    : topN([...releases, ...blogs].filter(i => i.personas.includes(tab)), 3)
+  // Breaking changes (always shown regardless of persona)
+  const breakingItems = releases.filter(r => r.impact === 'breaking').slice(0, 3)
 
   return (
     <div className="home">
       <div className="home-grid">
-        {/* Left: pinned + video */}
         <div className="home-left">
           <PinnedMessage />
           <FeaturedVideo />
         </div>
 
-        {/* Right: top blogs */}
         <div className="home-right">
-          <h3 className="home-section-title">This Week's Top Blogs</h3>
+          <h3 className="home-section-title">Top Blogs This Week</h3>
           <div className="home-cards">
             {topBlogs.map(item => (
               <FeedCard key={item.id} item={item} isRead={readItems.has(item.id)} onRead={onRead} />
@@ -70,32 +73,26 @@ export function HomePage({ onRead, readItems }: { onRead: (id: string) => void; 
         </div>
       </div>
 
-      {/* Persona picks */}
+      {/* Persona-filtered top picks — uses the global persona from the header chips */}
       <div className="home-persona-section">
-        <h3 className="home-section-title">Top Picks by Role</h3>
-        <div className="home-persona-tabs">
-          {personas.map(p => (
-            <button key={p.key} className={`home-persona-tab${tab === p.key ? ' active' : ''}`} onClick={() => setTab(p.key)}>
-              {p.label}
-            </button>
-          ))}
-        </div>
+        <h3 className="home-section-title">
+          Top Picks {persona !== 'all' ? `for ${persona.toUpperCase()}` : ''}
+        </h3>
         <div className="home-cards">
-          {personaFiltered.length === 0
+          {personaPicks.length === 0
             ? <p className="home-empty">No items for this role yet.</p>
-            : personaFiltered.map(item => (
+            : personaPicks.map(item => (
                 <FeedCard key={item.id} item={item} isRead={readItems.has(item.id)} onRead={onRead} />
               ))
           }
         </div>
       </div>
 
-      {/* Breaking changes callout */}
-      {releases.some(r => r.impact === 'breaking') && (
+      {breakingItems.length > 0 && (
         <div className="home-breaking">
           <h3 className="home-section-title">⚠️ Breaking Changes</h3>
           <div className="home-cards">
-            {releases.filter(r => r.impact === 'breaking').slice(0, 3).map(item => (
+            {breakingItems.map(item => (
               <FeedCard key={item.id} item={item} isRead={readItems.has(item.id)} onRead={onRead} />
             ))}
           </div>

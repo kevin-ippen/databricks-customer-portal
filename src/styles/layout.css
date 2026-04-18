@@ -89,8 +89,25 @@
 
 /* ═══ Page header ═══ */
 .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
+.page-header-left { flex: 1; min-width: 0; }
+
+/* Persona filter chips */
+.persona-filter { display: flex; gap: 4px; flex-shrink: 0; flex-wrap: wrap; }
+.pf-chip {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em;
+  padding: 5px 12px; border-radius: var(--r-sm);
+  color: var(--ink-3); background: var(--paper-2); border: 1px solid var(--paper-3);
+  transition: all var(--ease);
+}
+.pf-chip:hover { border-color: var(--ink-4); color: var(--ink); }
+.pf-chip.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .page-kicker {
   font-family: var(--mono);
   font-size: 11px;
